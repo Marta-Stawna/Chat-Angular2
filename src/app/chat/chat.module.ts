@@ -8,6 +8,7 @@ import { ChatPlaceComponent } from './chat-room/chat-place/chat-place.component'
   imports: [
     CommonModule
   ],
-  declarations: [KeyWordsListComponent, ChatRoomComponent, ChatPlaceComponent]
+  declarations: [KeyWordsListComponent,ChatRoomComponent, ChatPlaceComponent],
+  exports:[ChatRoomComponent]
 })
 export class ChatModule { }
