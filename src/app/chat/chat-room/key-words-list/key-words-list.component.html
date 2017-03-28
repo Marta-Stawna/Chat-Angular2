@@ -1,3 +1,5 @@
-<p>
-  key-words-list works!
-</p>
+<div *ngFor="let word of key_words;let i=index" class="list-group">
+ <div class="list-group-item key-words"><span class="glyphicon glyphicon-plus-sign"></span>{{word}}</div>
+</div>
+<span class="glyphicon glyphicon-plus"></span>
+
