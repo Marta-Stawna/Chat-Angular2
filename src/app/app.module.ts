@@ -8,15 +8,16 @@ import { HeaderComponent } from './header/header.component';
 import { ChatRoomComponent } from './chat/chat-room/chat-room.component';
 import { KeyWordsListComponent } from './chat/chat-room/key-words-list/key-words-list.component';
 import { ChatPlaceComponent } from './chat/chat-room/chat-place/chat-place.component';
-import { ChatRoomListComponent } from './welcome/chat-room-list/chat-room-list.component';
+import { ChatThemesComponent } from './chat/chat-themes/chat-themes.component';
 import { PageNotFoundComponent } from './not-found.component';
+
+import { ChatModule } from './chat/chat.module';
 
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-    { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-    { path: 'chat', loadChildren: 'app/chat/chat.module#ChatModule' },
-    { path: 'welcome', loadChildren: 'app/welcome/welcome.module#WelcomeModule' },
+    { path: '', redirectTo: 'chat', pathMatch: 'full' },
+    { path: 'chat', component: ChatThemesComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -25,6 +26,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
+    ChatThemesComponent,
     PageNotFoundComponent
   ],
   imports: [
@@ -33,7 +35,6 @@ const routes: Routes = [
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
