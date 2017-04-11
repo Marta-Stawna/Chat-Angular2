@@ -8,7 +8,8 @@ import { HeaderComponent } from './header/header.component';
 import { ChatRoomComponent } from './chat/chat-room/chat-room.component';
 import { KeyWordsListComponent } from './chat/chat-room/key-words-list/key-words-list.component';
 import { ChatPlaceComponent } from './chat/chat-room/chat-place/chat-place.component';
-import { ChatThemesComponent } from './chat/chat-themes/chat-themes.component';
+import { ChatThemesComponent } from './chat/chat-start/chat-themes/chat-themes.component';
+import { ChatStartComponent } from './chat/chat-start/chat-start.component';
 import { PageNotFoundComponent } from './not-found.component';
 
 import { ChatModule } from './chat/chat.module';
@@ -17,7 +18,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
     { path: '', redirectTo: 'chat', pathMatch: 'full' },
-    { path: 'chat', component: ChatThemesComponent },
+    { path: 'chat', component: ChatStartComponent },
     { path: '**', component: PageNotFoundComponent }
 ];
 
@@ -27,6 +28,7 @@ const routes: Routes = [
     AppComponent,
     HeaderComponent,
     ChatThemesComponent,
+    ChatStartComponent,
     PageNotFoundComponent
   ],
   imports: [
