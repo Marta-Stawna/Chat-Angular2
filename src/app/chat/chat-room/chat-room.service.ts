@@ -1,19 +1,16 @@
 import { Injectable } from '@angular/core';
+import { Http, Response } from "@angular/http";
+import { Observable } from "rxjs/Observable";
+
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class ChatRoomService {
 
-  constructor() { }
-  public key_words_data=[
-    "Juventus Turyn",
-    "SS Lazio Rzym",
-    "Liga włoska",
-    "Gonzalo Higuain",
-    "Mario Mandzukić"
-  ]
+  constructor(private http: Http) { }
 
-  getKeyWords(){
-    return this.key_words_data;
+  getKeyWords() :Observable<Object>{
+    return this.http.get('src/app/chat/data/keyWordsData.json').map((res:Response)=> res.json().data);
   }
 
 }
