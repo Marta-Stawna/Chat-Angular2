@@ -1,0 +1,14 @@
+.key-words{
+    background-color: #F0E68C;
+}
+
+.label{
+    margin:10px;
+    font-size: 25px;
+    color:#606060;
+    font-weight:bold;
+}
+
+.box{
+    box-shadow: 10px 10px;
+}

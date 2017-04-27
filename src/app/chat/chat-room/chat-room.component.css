@@ -1,0 +1,4 @@
+.chat-room{
+    display:flex;
+    justify-content: space-between;
+}
