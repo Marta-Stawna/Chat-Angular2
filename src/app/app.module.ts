@@ -11,16 +11,10 @@ import { ChatPlaceComponent } from './chat/chat-room/chat-place/chat-place.compo
 import { ChatThemesComponent } from './chat/chat-start/chat-themes/chat-themes.component';
 import { ChatStartComponent } from './chat/chat-start/chat-start.component';
 import { PageNotFoundComponent } from './not-found.component';
-
+import {routes} from './app-routing.module';
 import { ChatModule } from './chat/chat.module';
 
 import { RouterModule, Routes } from '@angular/router';
-
-const routes: Routes = [
-    { path: '', redirectTo: 'chat', pathMatch: 'full' },
-    { path: 'chat', component: ChatStartComponent },
-    { path: '**', component: PageNotFoundComponent }
-];
 
 
 @NgModule({
@@ -35,7 +29,8 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    ChatModule
   ],
   bootstrap: [AppComponent]
 })

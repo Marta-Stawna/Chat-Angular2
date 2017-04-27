@@ -14,5 +14,5 @@ export class ChatPlaceComponent implements OnInit {
   }
 
 drop(ev) {
-  ev.dataTransfer.getData("text")
+  ev.dataTransfer.getData("text");
 }}
