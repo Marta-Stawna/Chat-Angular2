@@ -5,14 +5,11 @@ import { Component, OnInit, Input } from '@angular/core';
   templateUrl: './chat-place.component.html',
   styleUrls: ['./chat-place.component.css']
 })
-export class ChatPlaceComponent implements OnInit {
-  
- 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-drop(ev) {
-  ev.dataTransfer.getData("text");
-}}
+export class ChatPlaceComponent implements OnInit{
+    ngOnInit(): void {
+    }
+    constructor(){ }
+  //   drop(ev) {
+  //      ev.dataTransfer.getData("text");
+  // }
+}

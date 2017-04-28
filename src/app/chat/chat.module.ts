@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { KeyWordsListComponent } from './chat-room/key-words-list/key-words-list.component';
 import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { ChatPlaceComponent } from './chat-room/chat-place/chat-place.component';
+import { QuillEditorModule } from 'ngx-quill-editor';
 
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,7 +14,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    QuillEditorModule
   ],
   declarations: [KeyWordsListComponent, ChatRoomComponent, ChatPlaceComponent],
 })
