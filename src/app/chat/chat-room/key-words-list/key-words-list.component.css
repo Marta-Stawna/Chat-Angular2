@@ -1,14 +1,23 @@
 .key-words{
     background-color: #F0E68C;
+    border:1px solid grey;
 }
 
 .label{
-    margin:10px;
     font-size: 25px;
     color:#606060;
     font-weight:bold;
+    margin-bottom:20px ! important;
 }
 
 .box{
-    box-shadow: 10px 10px;
+    margin:10px;
+}
+
+.help-words{
+    padding:20px;
+    margin:20px;
+    margin-left:50px;
+    border-radius: 10%;
+    border:1px solid grey;
 }
