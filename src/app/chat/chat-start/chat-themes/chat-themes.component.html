@@ -1,10 +1,8 @@
-<p>
-  chat-themes works!
-</p>
-<div>
-  <ul>
-    <li *ngFor="let themeInsideFor of themes">
-      {{themeInsideFor}}
-    </li>
-  </ul>
+<div class="label">Tematy:</div>
+<div class="themes">
+    <div class="box">
+        <div *ngFor="let themeInsideFor of themes" class="list-group">
+            <div class="list-group-item themes-list">{{themeInsideFor}}</div>
+        </div>
+     </div>
 </div>
