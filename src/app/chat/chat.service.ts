@@ -9,10 +9,17 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ChatService {
   public nick: string = '';
+  public currentTheme: string = '';
   getNick() {
     return this.nick;
   }
   setNick(value: string){
     this.nick=value;
+  }
+  getCurrentTheme() {
+    return this.currentTheme;
+  }
+  setCurrentTheme(value: string){
+    this.currentTheme=value;
   }
 }

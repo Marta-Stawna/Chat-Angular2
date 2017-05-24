@@ -17,10 +17,6 @@ export class ChatStartComponent implements OnInit {
   }
   submitQuestion(value: string) {
     this.chatService.setNick(value);
-    console.log(value);
-    console.log(this.chatService.getNick());
-    this.router.navigate(['/chat-room']);
-
   }
 
 }

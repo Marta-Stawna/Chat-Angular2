@@ -2,7 +2,7 @@
 <div class="themes">
     <div class="box">
         <div *ngFor="let themeInsideFor of themes" class="list-group">
-            <div class="list-group-item themes-list">{{themeInsideFor}}</div>
+            <button class="list-group-item themes-list" (click)="goToChat(themeInsideFor)">{{themeInsideFor}}</button>
         </div>
      </div>
 </div>

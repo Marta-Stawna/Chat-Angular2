@@ -12,8 +12,8 @@ export class ChatRoomComponent implements OnInit {
   constructor(private chatService: ChatService) { }
 
   ngOnInit() {
-    console.log("jestem tu");
     console.log(this.chatService.getNick());
+    console.log(this.chatService.getCurrentTheme());
   }
 
 }
