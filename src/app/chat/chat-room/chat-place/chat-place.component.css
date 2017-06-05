@@ -1,0 +1,43 @@
+.quill{
+    width:500px;
+    background-color: #fff;
+    height:150px;
+}
+
+.window{
+    width:500px;
+    height:250px;
+    background-color:#DEB887;
+}
+
+li{
+    list-style-type: none; 
+}
+.editor{
+    background-color: red;
+}
+
+.one-message{
+    width:100%;
+    padding:10px;
+    border-bottom:1px solid grey;
+    
+}
+.one-message div{
+    display: inline-block;
+}
+.content{
+    background-color:#fff;
+    width: 400px;
+    padding:10px;
+    margin:10px;
+    border-radius: 5%;
+}
+.place{
+    width:600px;
+    height:500px;
+    background-color: #00008B;
+    border: 1px solid #000;
+    border-radius: 10%;
+    padding:50px;
+}

@@ -1,7 +1,14 @@
+<div class="theme">
+  Znajdujesz się w temacie: {{ this.chatService.currentTheme }}
+</div>
+<div class="nickBox">
+  <a *ngIf="this.chatService.nick != ''" class="nick">
+    {{ this.chatService.nick }}
+  </a>
+</div>
 <div class="container chat-room">
   <app-chat-place></app-chat-place>
   <div>
    <app-key-words-list></app-key-words-list>
   </div>
 </div>
-

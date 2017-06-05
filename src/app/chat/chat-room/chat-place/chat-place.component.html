@@ -1,1 +1,18 @@
-<quill-editor></quill-editor>
+<div class="col-md">
+<div class="place">
+    <div class="window">
+        <ul *ngIf="messages">
+            <li *ngFor="let message of messages;let i=index">
+                <div class="one-message">
+                    <div class="glyphicon glyphicon-user"> </div>
+                    <div class="content">{{message}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="quill">
+            <quill-editor class="editor" #quill></quill-editor>
+            <button class="btn btn-success" (click)="sendMessages(quill.editorElem.innerText)">Wyslij</button>
+    </div>
+ </div>
+</div>

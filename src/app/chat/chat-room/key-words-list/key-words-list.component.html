@@ -1,7 +1,8 @@
-<div>
+<div class="help-words">
     <div class="label">Pomocznice słowa</div>
-    <div *ngFor="let word of keyWords;let i=index" class="list-group box">
-         <div class="list-group-item key-words" draggable="true" (dragstart)="drag($event)" id="drag">{{word}}</div>
-    </div>
-
+        <div class="box">
+            <div *ngFor="let word of keyWords;let i=index" class="list-group">
+                <div class="list-group-item key-words" draggable="true" (dragstart)="drag($event)" id="drag">{{word}}</div>
+            </div>
+     </div>
 </div>

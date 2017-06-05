@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ChatService } from './../chat.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChatStartComponent implements OnInit {
 
-  constructor() { }
+  constructor(private chatService: ChatService, private router: Router) {
+  }
 
   ngOnInit() {
+  }
+  submitQuestion(value: string) {
+    this.chatService.setNick(value);
   }
 
 }
