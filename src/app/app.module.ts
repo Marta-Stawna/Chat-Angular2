@@ -14,9 +14,9 @@ import { ChatStartComponent } from './chat/chat-start/chat-start.component';
 import { PageNotFoundComponent } from './not-found.component';
 import {routes} from './app-routing.module';
 import { ChatModule } from './chat/chat.module';
-
 import { RouterModule, Routes } from '@angular/router';
-
+import {AngularFireModule} from 'angularfire2';
+import {config} from '../environments/firebase.config';
 
 @NgModule({
   declarations: [
@@ -31,8 +31,9 @@ import { RouterModule, Routes } from '@angular/router';
     FormsModule,
     HttpModule,
     RouterModule.forRoot(routes),
-    ChatModule
-  ],
+    ChatModule,
+    AngularFireModule.initializeApp(config.firebase),
+],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
