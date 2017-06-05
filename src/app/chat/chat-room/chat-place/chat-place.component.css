@@ -1,13 +1,24 @@
 .quill{
-    width:500px;
+    width:600px;
     background-color: #fff;
-    height:150px;
+    height:190px;
+}
+
+
+/deep/ .quill .ql-container {
+    height:50%;
+    
+}
+/deep/ .quill .ql-container .ql-editor{
+    min-height: 0px;
 }
 
 .window{
-    width:500px;
-    height:250px;
+    width:600px;
+    height:300px;
     background-color:#DEB887;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 li{
@@ -34,10 +45,20 @@ li{
     border-radius: 5%;
 }
 .place{
-    width:600px;
-    height:500px;
+    width:700px;
+    height:620px;
     background-color: #00008B;
     border: 1px solid #000;
     border-radius: 10%;
     padding:50px;
+}
+
+.btn-send{
+    background-color:grey;
+    background-image: none;
+    height:40px;
+    border:none;
+    color:white;
+    width:600px;
+    padding:2px;
 }

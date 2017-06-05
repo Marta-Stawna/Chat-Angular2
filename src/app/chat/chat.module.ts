@@ -5,7 +5,6 @@ import { ChatRoomComponent } from './chat-room/chat-room.component';
 import { ChatPlaceComponent } from './chat-room/chat-place/chat-place.component';
 import { QuillEditorModule } from 'ngx-quill-editor';
 import { FormsModule } from '@angular/forms';
-
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [

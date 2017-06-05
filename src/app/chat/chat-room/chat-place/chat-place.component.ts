@@ -7,16 +7,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ChatPlaceComponent implements OnInit{
 
-    messages=[];
-
-    ngOnInit(): void {
-    }
-    constructor(){}
-  //   drop(ev) {
-  //      ev.dataTransfer.getData("text");
-  // }
-    sendMessages(message){
-      console.log(message)
-      return this.messages.push(message);
+messages=[];
+ngOnInit(): void {
+}
+constructor(){}
+        //   drop(ev) {
+        //      ev.dataTransfer.getData("text");
+        // }
+sendMessages(element){
+      let message = element.querySelector('p');
+      return this.messages.push(message.innerHTML);
     }
 }
