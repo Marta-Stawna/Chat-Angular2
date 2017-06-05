@@ -1,4 +1,13 @@
-<p>
-  chat-start works!
-</p>
+<div class="nickBox">
+  <a *ngIf="this.chatService.nick == ''">
+    Nick:
+    <input #inputValue type="text" id="inputValue" required placeholder value="">
+    <div>
+      <button type="submit" class="btn btn-primary"(click)="submitQuestion(inputValue.value)">Dalej</button>
+    </div>
+  </a>
+  <a *ngIf="this.chatService.nick != ''" class="nick">
+    {{ this.chatService.nick }}
+  </a>
+</div>
 <app-chat-themes></app-chat-themes>
