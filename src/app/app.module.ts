@@ -34,9 +34,11 @@ import { ChatService } from "./chat/chat.service";
     HttpModule,
     RouterModule.forRoot(routes),
     ChatModule,
-    AngularFireModule.initializeApp(config.firebase),
+    AngularFireModule.initializeApp(config.firebase)
 ],
-  providers:[ ChatService],
-  bootstrap: [AppComponent]
+
+  bootstrap: [AppComponent],
+  providers: [ ChatService ]
+
 })
 export class AppModule { }
