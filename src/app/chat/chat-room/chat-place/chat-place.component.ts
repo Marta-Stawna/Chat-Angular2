@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { ChatService } from "../../chat.service";
 
 @Component({
   selector: 'app-chat-place',
@@ -8,9 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ChatPlaceComponent implements OnInit{
 
 messages=[];
+date;
 ngOnInit(): void {
 }
-constructor(){}
+constructor(private serviceChat : ChatService){
+    this.date= new Date().toJSON().slice(11,19).replace(/-/g,'-');
+}
         //   drop(ev) {
         //      ev.dataTransfer.getData("text");
         // }

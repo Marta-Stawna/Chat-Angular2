@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response }          from '@angular/http';
-import { Headers, RequestOptions } from '@angular/http';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -9,7 +8,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class ChatService {
   public nick: string = '';
-  public currentTheme: string = '';
+  public currentTheme;
   getNick() {
     return this.nick;
   }
@@ -19,7 +18,7 @@ export class ChatService {
   getCurrentTheme() {
     return this.currentTheme;
   }
-  setCurrentTheme(value: string){
+  setCurrentTheme(value){
     this.currentTheme=value;
   }
 }

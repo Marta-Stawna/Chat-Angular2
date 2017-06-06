@@ -5,6 +5,9 @@
             <li *ngFor="let message of messages;let i=index">
                 <div class="one-message">
                     <div class="glyphicon glyphicon-user"> </div>
+                     <p *ngIf="this.serviceChat.nick!= ''" >
+                            {{ this.serviceChat.nick }} {{date}}
+                        </p>
                     <div class="content">{{message}}</div>
                 </div>
             </li>

@@ -9,8 +9,8 @@ export class ChatStartService {
   constructor(private http: Http) { }
 
   getThemes() : Observable<string[]>{
-    return this.http.get('src/app/chat/data/themesData.json')
-      .map((res)=> res.json().data);
+    return this.http.get('https://chat-angular2-5c466.firebaseio.com/.json')
+      .map((res)=>res.json().data.data);
   }
 
 }

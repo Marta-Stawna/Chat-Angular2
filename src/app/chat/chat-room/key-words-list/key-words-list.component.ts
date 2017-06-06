@@ -1,35 +1,33 @@
 import { Component, OnInit, HostListener, OnDestroy, HostBinding, Input } from '@angular/core';
-import { ChatRoomService } from '../chat-room.service';
 import { Subscription } from "rxjs/Subscription";
+import { ChatService } from "../../chat.service";
 //import {AngularFireDatabase, FirebaseListObservable} from 'angularfire2/database';
 
 @Component({
   selector: 'app-key-words-list',
   templateUrl: './key-words-list.component.html',
-  styleUrls: ['./key-words-list.component.css'],
-  providers:[ChatRoomService]
+  styleUrls: ['./key-words-list.component.css']
 })
 export class KeyWordsListComponent implements OnInit {
 
   @Input() dragWord;
   public keyWords;
-  private subscribtion:Subscription;
  // items: FirebaseListObservable<any[]>;
-  constructor(  private serviceChatRoom:ChatRoomService){
+  constructor( private chatService:ChatService){
+    console.log(this.chatService.getCurrentTheme())
+    this.keyWords=this.chatService.getCurrentTheme().data;
+    
     //this.items = db.list('/items');
   }
 
   ngOnInit() {
-    this.subscribtion=this.serviceChatRoom.getKeyWords().subscribe(data=>this.keyWords=data);//obsługa błedu- messegeBox- serwis
     //this.fbGetData();
+     console.log("aaaaaaaaaaa",this.keyWords)
   }
   // @HostListener('dragEnd')//nazwa event HTML
   //  test(e){
   // }
 
-   ngOnDestroy(){
-      this.subscribtion.unsubscribe();
-   }
 
   //  fbGetData(){
   //    firebase.database().ref('/').on('child_addes',(snapshot)=>
