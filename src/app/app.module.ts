@@ -17,6 +17,7 @@ import { ChatModule } from './chat/chat.module';
 import { RouterModule, Routes } from '@angular/router';
 import {AngularFireModule} from 'angularfire2';
 import {config} from '../environments/firebase.config';
+import { ChatService } from "./chat/chat.service";
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import {config} from '../environments/firebase.config';
     ChatModule,
     AngularFireModule.initializeApp(config.firebase),
 ],
+  providers:[ ChatService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
