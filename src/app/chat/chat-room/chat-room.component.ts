@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject} from '@angular/core';
 import { ChatService } from './../chat.service';
-
 
 @Component({
   selector: 'app-chat-room',
@@ -9,11 +8,10 @@ import { ChatService } from './../chat.service';
 })
 export class ChatRoomComponent implements OnInit {
 
-  constructor(private chatService: ChatService) { }
+  constructor(private chatService: ChatService) {
+    }
 
   ngOnInit() {
-    console.log(this.chatService.getNick());
-    console.log(this.chatService.getCurrentTheme());
   }
 
 }

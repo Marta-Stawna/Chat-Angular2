@@ -19,7 +19,6 @@ import {AngularFireModule} from 'angularfire2';
 import {config} from '../environments/firebase.config';
 import { ChatService } from "./chat/chat.service";
 
-
 @NgModule({
   declarations: [
     AppComponent,

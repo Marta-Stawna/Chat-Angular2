@@ -2,20 +2,23 @@
 <div class="place">
     <div class="window">
         <ul *ngIf="messages">
-            <li *ngFor="let message of messages;let i=index">
+            <li *ngFor="let item of items | async">
                 <div class="one-message">
+                  <div>
                     <div class="glyphicon glyphicon-user"> </div>
-                     <p *ngIf="this.serviceChat.nick!= ''" >
-                            {{ this.serviceChat.nick }} {{date}}
-                        </p>
-                    <div class="content">{{message}}</div>
-                </div>
+                     <div>
+                            {{ item.name }}
+                            {{date}}
+                        </div>
+                      </div>
+                    <div class="content">aaa {{item.message}}</div>
+              </div>
             </li>
         </ul>
     </div>
     <div class="quill">
-            <quill-editor class="editor" #quill></quill-editor>
-            <button class="btn btn-success btn-send" (click)="sendMessages(quill.editorElem)">Wyslij</button>
+            <quill-editor class="editor" #quill  [(ngModel)]="msgVal"></quill-editor>
+            <button class="btn btn-success btn-send" (click)="chatSend(quill)">Wyslij</button>
     </div>
  </div>
 </div>
