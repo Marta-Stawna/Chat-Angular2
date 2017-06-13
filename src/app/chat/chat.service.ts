@@ -9,6 +9,7 @@ import 'rxjs/add/operator/map';
 export class ChatService {
   public nick: string = '';
   public currentTheme;
+  private id;
   getNick() {
     return this.nick;
   }
@@ -21,4 +22,11 @@ export class ChatService {
   setCurrentTheme(value){
     this.currentTheme=value;
   }
+  setId(id){
+    this.id = id;
+  }
+  getId(){
+    return  this.id;
+  }
+
 }

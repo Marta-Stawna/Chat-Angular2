@@ -19,9 +19,7 @@ export class ChatThemesComponent implements OnInit {
 
   ngOnInit() {
     this.chatStartService.getThemes().subscribe(
-      data => {console.log("data",data);return this.themes = data}
-    );
-    console.log("theme", this.themes)
+      data =>this.themes = data)
   }
   goToChat(theme){
     this.chatService.setCurrentTheme(theme);

@@ -1,3 +1,17 @@
+.body-content {
+background-color: #E8E8E8;
+width:100%;
+display:flex;
+justify-content: space-between;
+flex-direction: column;
+min-height: 100vh;
+}
+
 .main{
-    margin-top:50px;
+    flex:1;
+}
+
+.footer{
+  background-color:black;
+  height:50px
 }

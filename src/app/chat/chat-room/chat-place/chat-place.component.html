@@ -6,12 +6,12 @@
                 <div class="one-message">
                   <div>
                     <div class="glyphicon glyphicon-user"> </div>
-                     <div>
+                     <div >
                             {{ item.name }}
                             {{date}}
                         </div>
                       </div>
-                    <div class="content">aaa {{item.message}}</div>
+                    <div class="content"  [innerHTML]="item.message" [style]="item.message.style">{{item.message}}</div>
               </div>
             </li>
         </ul>

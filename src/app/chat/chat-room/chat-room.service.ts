@@ -9,9 +9,7 @@ export class ChatRoomService {
 
   constructor(private http: Http) {
 }
-
   getKeyWords() :Observable<Object>{
     return this.http.get('https://chat-angular2-5c466.firebaseio.com/.json').map((res:Response)=> res.json().data);
   }
-
 }
