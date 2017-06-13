@@ -10,7 +10,6 @@ import { AngularFire, AuthProviders, AuthMethods,FirebaseListObservable } from '
 export class ChatPlaceComponent implements OnInit{
 
 messages=[];
-date;
 items: FirebaseListObservable<any>;
 name: any;
 msgVal: string = '';
@@ -18,7 +17,6 @@ ngOnInit(){
 }
 
   constructor(private chatService: ChatService,public af: AngularFire) {
-    this.date= new Date().toJSON().slice(11,19).replace(/-/g,'-');
     let id;
     setTimeout(()=>{
       id =chatService.getId();
@@ -47,10 +45,11 @@ ngOnInit(){
 
   }
     chatSend(element) {
+      let date= new Date().toLocaleTimeString();
       let name =this.chatService.getNick();
       let message = element.editorElem.children[0].innerHTML;
       console.log(message)
-      this.items.push({ message: message, name: name});
+      this.items.push({ message: message, name: name, date :date});
       this.msgVal = '';
   }
 
