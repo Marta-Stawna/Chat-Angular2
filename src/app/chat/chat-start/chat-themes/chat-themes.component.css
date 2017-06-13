@@ -2,8 +2,11 @@
     font-size: 25px;
     color: #191919;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     margin-left: 300px;
+    padding-bottom:20px;
+    height:50px;
+
 }
 
 .themes{
@@ -14,6 +17,7 @@
     border-radius: 10%;
     padding: 50px;
     margin-left: 90px;
+    margin-top:20px;
 }
 
 .box{
