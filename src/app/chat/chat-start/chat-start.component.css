@@ -1,6 +1,14 @@
 .nickBox {
   text-align: right;
+  font-size: 20px;
 }
 .nick {
   font-size: x-large;
+}
+
+#inputValue{
+  border:1px solid grey;
+  border-radius: 10%;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }

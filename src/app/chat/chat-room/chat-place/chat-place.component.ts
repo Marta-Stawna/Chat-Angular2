@@ -13,8 +13,9 @@ messages=[];
 items: FirebaseListObservable<any>;
 name: any;
 msgVal: string = '';
-ngOnInit(){
-}
+
+  ngOnInit(){
+  }
 
   constructor(private chatService: ChatService,public af: AngularFire) {
     let id;
@@ -48,7 +49,6 @@ ngOnInit(){
       let date= new Date().toLocaleTimeString();
       let name =this.chatService.getNick();
       let message = element.editorElem.children[0].innerHTML;
-      console.log(message)
       this.items.push({ message: message, name: name, date :date});
       this.msgVal = '';
   }

@@ -15,7 +15,8 @@ export class ChatStartComponent implements OnInit {
 
   ngOnInit() {
   }
-  submitQuestion(value: string) {
+
+  setNick(value: string) {
     this.chatService.setNick(value);
   }
 
