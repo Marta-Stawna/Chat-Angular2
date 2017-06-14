@@ -9,6 +9,7 @@ import { AngularFire, AuthProviders, AuthMethods,FirebaseListObservable } from '
 })
 export class ChatPlaceComponent implements OnInit{
 
+messages=[];
 items: FirebaseListObservable<any>;
 name: any;
 msgVal: string = '';
